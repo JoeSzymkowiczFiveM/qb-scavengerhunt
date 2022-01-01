@@ -51,7 +51,6 @@ Citizen.CreateThread(function()
                                 v.entity = entity
                                 v.isRendered = true
                             elseif v.type == "boxzone" then
-                                --print("ADD : " .. k)
                                 nearBoxZone(k, v.coords, v.width, v.height, v.heading, v.minZ, v.maxZ)
                                 v.isRendered = true
                             end
@@ -68,10 +67,9 @@ Citizen.CreateThread(function()
                                 v.entity = nil
                                 v.isRendered = false
                             elseif v.type == "object" then
-                                --SetEntityAsNoLongerNeeded(v.entity)
+                                SetEntityAsNoLongerNeeded(v.entity)
                                 for i = 255, 0, -51 do
                                     Citizen.Wait(50)
-                                    --print("1")
                                     SetEntityAlpha(v.entity, i, false)
                                 end
                                 DeleteObject(v.entity)
@@ -79,7 +77,6 @@ Citizen.CreateThread(function()
                                 v.entity = nil
                                 v.isRendered = false
                             elseif v.type == "boxzone" then
-                                --print("REMOVE : " .. k)
                                 exports['qb-target']:RemoveZone("scavenger_boxzone_"..k)
                                 v.isRendered = false
                             end
@@ -101,7 +98,6 @@ Citizen.CreateThread(function()
                         if v.completed == false and v.type  == "item" then
                             local item = Hunts[k]["name"]
                             for a, s in pairs(QBCore.Functions.GetPlayerData().items) do
-                                print(s.name)
                                 if s.name == item then
                                     TriggerServerEvent('qb-scavengerhunt:server:findGoal', k)
                                 end
@@ -351,7 +347,6 @@ function leaveTeam(teamNumberInc)
 end
 
 function toggleHuntLock(scavengerHuntStartedOutgoing)
-    print(scavengerHuntStartedOutgoing)
     TriggerServerEvent('qb-scavengerhunt:server:toggleHuntLock', scavengerHuntStartedOutgoing)
 end
 
