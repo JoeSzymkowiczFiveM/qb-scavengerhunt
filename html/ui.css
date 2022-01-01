@@ -1,0 +1,121 @@
+body {
+    overflow: hidden;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.scavenger-hunt {
+    display: none;
+    height: 100vh;
+}
+
+#scavenger-list {
+    position: absolute;
+    width: 165vh;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    user-select: none;
+}
+
+#clue_0 {
+    position: absolute;
+    left: 66.8vh;
+    top: 18vh;
+    font-family: 'Lato';
+    font-size: 14px;
+    width: 510px;
+    word-wrap: break-word;
+}
+
+#clue_1 {
+    position: absolute;
+    left: 66.8vh;
+    top: 24vh;
+    font-family: 'Lato';
+    font-size: 14px;
+    width: 510px;
+    word-wrap: break-word;
+}
+
+#clue_2 {
+    position: absolute;
+    left: 66.8vh;
+    top: 30vh;
+    font-family: 'Lato';
+    font-size: 14px;
+    width: 510px;
+    word-wrap: break-word;
+}
+
+#clue_3 {
+    position: absolute;
+    left: 66.8vh;
+    top: 36vh;
+    font-family: 'Lato';
+    font-size: 14px;
+    width: 510px;
+    word-wrap: break-word;
+}
+
+#clue_4 {
+    position: absolute;
+    left: 66.8vh;
+    top: 42vh;
+    font-family: 'Lato';
+    font-size: 14px;
+    width: 510px;
+    word-wrap: break-word;
+}
+
+#clue_5 {
+    position: absolute;
+    left: 66.8vh;
+    top: 48vh;
+    font-family: 'Lato';
+    font-size: 14px;
+    width: 510px;
+    word-wrap: break-word;
+}
+
+#clue_6 {
+    position: absolute;
+    left: 66.8vh;
+    top: 54vh;
+    font-family: 'Lato';
+    font-size: 14px;
+    width: 510px;
+    word-wrap: break-word;
+}
+
+#clue_7 {
+    position: absolute;
+    left: 66.8vh;
+    top: 60vh;
+    font-family: 'Lato';
+    font-size: 14px;
+    width: 510px;
+    word-wrap: break-word;
+}
+
+#clue_8 {
+    position: absolute;
+    left: 66.8vh;
+    top: 66vh;
+    font-family: 'Lato';
+    font-size: 14px;
+    width: 510px;
+    word-wrap: break-word;
+}
+
+#clue_9 {
+    position: absolute;
+    left: 66.8vh;
+    top: 72vh;
+    font-family: 'Lato';
+    font-size: 14px;
+    width: 510px;
+    word-wrap: break-word;
+}
