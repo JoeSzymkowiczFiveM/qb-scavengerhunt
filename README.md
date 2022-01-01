@@ -22,7 +22,7 @@ There are 5 types of goals in the config:
 
 ![](https://i.giphy.com/media/qyR7D28Hsu5TAZozju/giphy.webp)
 
-## Usage/Boss Menu
+## Boss Menu
 The player designated to admin the scavenger hunt has access to an admin menu with two functions. This can be opened with the `sh_boss` command.
 - Lock/Unlock Hunt - This action begins/halts the scavenger hunt. While the scavenger hunt is started, players are not able to join or leave teams. Players are not able to view the scavenger hunt task list until the hunt is started, to prevent them from looking at clues early. If for whatever reason you need to halt the scavenger hunt, goals will become unavailable. Items, boxzones will become unresponsive and peds will walk away from their designated areas, and become available again when the hunt is resumed.
 - Get Team Progress - While the scavenger is ongoing, the admin can view task progress of each team. This might be helpful at the end also, to quickly asses if each team completed eash task or not.
