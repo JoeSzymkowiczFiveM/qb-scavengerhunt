@@ -1,0 +1,1 @@
+["scavenger_hunt_list"] 		 = {["name"] = "scavenger_hunt_list", 			["label"] = "Scavenger Hunt List", 		["weight"] = 100, 		["type"] = "item", 		["image"] = "scavenger_hunt_list.png", 	["unique"] = true, 		["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = "List of scavenger hunt goals. Have fun."},
