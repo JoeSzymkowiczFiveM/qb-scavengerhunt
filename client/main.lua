@@ -63,7 +63,7 @@ Citizen.CreateThread(function()
                                     SetEntityAlpha(v.entity, i, false)
                                 end
                                 DeletePed(v.entity)
-                                exports['qb-target']:RemoveZone("scavenger_ped_"..v.entity)
+                                exports.qtarget:RemoveZone("scavenger_ped_"..v.entity)
                                 v.entity = nil
                                 v.isRendered = false
                             elseif v.type == "object" then
@@ -73,11 +73,11 @@ Citizen.CreateThread(function()
                                     SetEntityAlpha(v.entity, i, false)
                                 end
                                 DeleteObject(v.entity)
-                                exports['qb-target']:RemoveZone("scavenger_object_"..v.entity)
+                                exports.qtarget:RemoveZone("scavenger_object_"..v.entity)
                                 v.entity = nil
                                 v.isRendered = false
                             elseif v.type == "boxzone" then
-                                exports['qb-target']:RemoveZone("scavenger_boxzone_"..k)
+                                exports.qtarget:RemoveZone("scavenger_boxzone_"..k)
                                 v.isRendered = false
                             end
                         end
@@ -158,12 +158,11 @@ function nearObject(model, coords, goal)
     end
     FreezeEntityPosition(object, true)
 
-    exports['qb-target']:AddTargetEntity(object, {
+    exports.qtarget:AddTargetEntity(object, {
         --debugPoly=true,
         options = {
             {
                 name = "scavenger_object_"..object, 
-                type = "client",
                 event = "qb-scavengerhunt:client:findGoal",
                 icon = "fas fa-question",
                 label = "What is this",
@@ -177,7 +176,7 @@ function nearObject(model, coords, goal)
 end
 
 function nearBoxZone(key, coords, width, height, heading, minZ, maxZ)
-    exports['qb-target']:AddBoxZone("scavenger_boxzone_"..key, coords, width, height, {
+    exports.qtarget:AddBoxZone("scavenger_boxzone_"..key, coords, width, height, {
         name="scavenger_boxzone_"..key,
         heading=heading,
         --debugPoly=true,
@@ -186,7 +185,6 @@ function nearBoxZone(key, coords, width, height, heading, minZ, maxZ)
     }, {
         options = {
             {
-                type = "client",
                 event = "qb-scavengerhunt:client:findGoal",
                 icon = "fas fa-question",
                 label = "What is this",
@@ -241,14 +239,13 @@ function nearPed(model, coords, gender, animDict, animName, scenario, distance, 
         SetEntityAlpha(ped, i, false)
     end
 
-    exports['qb-target']:AddEntityZone("scavenger_ped_"..ped, ped, {
+    exports.qtarget:AddEntityZone("scavenger_ped_"..ped, ped, {
         name = "ped_spawner-"..ped,
         heading=GetEntityHeading(ped),
         --debugPoly=true,
     }, {
         options = {
             {
-                type = "client",
                 event = "qb-scavengerhunt:client:findGoal",
                 icon = "fas fa-question",
                 label = "What is this",
