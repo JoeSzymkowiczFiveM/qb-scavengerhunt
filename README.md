@@ -31,4 +31,4 @@ The player designated to admin the scavenger hunt has access to an admin menu wi
 
 
 ## Qbus.xyz Discord:
-[Discord](https://discord.gg/Gec9kBKwcB)
+[Discord](https://discord.gg/jTsrKaV6As)
